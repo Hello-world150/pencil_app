@@ -21,14 +21,14 @@ class _HomePageState extends State<HomePage> {
 
   // navigation destinations
   final List<NavigationDestination> navigationDestinations = [
-    const NavigationDestination(icon: Icon(Icons.explore), label: 'Hitokoto'),
-    const NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+    const NavigationDestination(icon: Icon(Icons.explore), label: '浏览'),
+    const NavigationDestination(icon: Icon(Icons.person), label: '个人'),
   ];
 
   // pages to diaplay
   final List<Widget> pages = [
     // explore hitokoto page
-    const HitokotoPage(),
+    const ExplorePage(),
 
     // user profile page
     const ProfilePage(),

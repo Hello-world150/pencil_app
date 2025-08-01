@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'time_corridor_page.dart';
+import 'create_hitokoto_page.dart';
 
-class HitokotoPage extends StatelessWidget {
-  const HitokotoPage({super.key});
+class ExplorePage extends StatelessWidget {
+  const ExplorePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,8 @@ class HitokotoPage extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.history),
+
+            // navigate to the time corridor page
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -29,6 +32,18 @@ class HitokotoPage extends StatelessWidget {
             },
           ),
         ],
+      ),
+
+      // this is the floating action button to create a new hitokoto
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.create),
+
+        // navigate to the create hitokoto page
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const CreateHitokotoPage()),
+          );
+        },
       ),
       body: Center(child: Text('Explore Page')),
     );
