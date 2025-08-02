@@ -1,3 +1,3 @@
 # pencil_app
 
-An App to explore and store hitokotos.
+An App to store, share and explore hitokotos.
