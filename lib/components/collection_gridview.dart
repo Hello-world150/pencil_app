@@ -5,7 +5,7 @@ class CollectionGridview extends StatelessWidget {
 
   // the border radius for the gridview items
   // it is the card's border radius of the theme
-  final double borderRadius = 8.0;
+  final double borderRadius = 10.0;
 
   @override
   Widget build(BuildContext context) {
