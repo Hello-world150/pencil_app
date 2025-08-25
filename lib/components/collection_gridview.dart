@@ -20,14 +20,7 @@ class CollectionGridview extends StatelessWidget {
         // TODO: get data from API
         children: List.generate(100, (index) {
           // make a card clickable and apply inkwell
-          return
-          // this is the container for the collection item
-          // child: Container(
-          //   decoration: BoxDecoration(
-          //     border: Border.all(color: Colors.grey, width: 1),
-          //     borderRadius: BorderRadius.circular(borderRadius),
-          //   ),
-          Card(
+          return Card.filled(
             child: InkWell(
               borderRadius: BorderRadius.circular(borderRadius),
 

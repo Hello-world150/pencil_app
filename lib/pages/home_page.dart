@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
 
   // navigation destinations
   final List<NavigationDestination> navigationDestinations = [
-    const NavigationDestination(icon: Icon(Icons.explore), label: '浏览'),
+    const NavigationDestination(icon: Icon(Icons.explore), label: '发现'),
     const NavigationDestination(icon: Icon(Icons.person), label: '个人'),
   ];
 

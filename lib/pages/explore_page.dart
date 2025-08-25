@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pencil_app/components/explore_carouselview.dart';
 import 'time_corridor_page.dart';
 import 'create_hitokoto_page.dart';
 
@@ -45,7 +46,15 @@ class ExplorePage extends StatelessWidget {
           );
         },
       ),
-      body: Center(child: Text('Explore Page')),
+      body: Padding(
+        padding: const EdgeInsets.all(40.0),
+        child: Column(
+          children: [
+            // explore the online hitokotos
+            ExploreCarouselView(),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.pencil_app"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973" // Debugging NDK version, ensure it matches your local setup.
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
