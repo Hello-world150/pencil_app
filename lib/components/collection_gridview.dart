@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 class CollectionGridview extends StatelessWidget {
   const CollectionGridview({super.key});
 
-  // the border radius for the gridview items
-  // it is the card's border radius of the theme
-  final double borderRadius = 10.0;
-
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -20,10 +16,9 @@ class CollectionGridview extends StatelessWidget {
         // TODO: get data from API
         children: List.generate(100, (index) {
           // make a card clickable and apply inkwell
-          return Card.filled(
+          return Card(
+            clipBehavior: Clip.hardEdge,
             child: InkWell(
-              borderRadius: BorderRadius.circular(borderRadius),
-
               // when tap it, navigate to the collection page
               onTap: () => {
                 Navigator.push(

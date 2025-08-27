@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pencil_app/components/explore_carouselview.dart';
 import 'time_corridor_page.dart';
 import 'create_hitokoto_page.dart';
+import '/components/explore_card_swiper.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});
@@ -11,7 +11,7 @@ class ExplorePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         // this is title setting
-        title: const Text('发现'),
+        title: Text('发现'),
         titleTextStyle: TextTheme.of(context).titleSmall,
         centerTitle: true,
 
@@ -46,14 +46,10 @@ class ExplorePage extends StatelessWidget {
           );
         },
       ),
+
       body: Padding(
-        padding: const EdgeInsets.all(40.0),
-        child: Column(
-          children: [
-            // explore the online hitokotos
-            ExploreCarouselView(),
-          ],
-        ),
+        padding: const EdgeInsets.only(top: 85.0, bottom: 85.0),
+        child: ExploreCardSwiper(),
       ),
     );
   }
