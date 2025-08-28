@@ -1,10 +1,15 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+const String apiRandomHitokotoUrl = 'http://localhost:8000/hitokoto/';
+
 // the class of hitokoto
 class Hitokoto {
   // the hitokoto id
   final int id;
+
+  // the title of the hitokoto
+  String? title;
 
   // the content of the hitokoto
   String content;
@@ -14,7 +19,11 @@ class Hitokoto {
 
   // the character of the hitokoto
   String? fromWho;
+
+  // the user id of the hitokoto
   final int userId;
+
+  // the creation time of the hitokoto
   final int createdAt;
 
   Hitokoto({
@@ -50,7 +59,7 @@ class Hitokoto {
 }
 
 Future<Hitokoto> fetchHitokoto() async {
-  final response = await http.get(Uri.parse('https://www.qhl.codes/hitokoto'));
+  final response = await http.get(Uri.parse(apiRandomHitokotoUrl));
 
   if (response.statusCode == 200) {
     // if the server returns a 200 OK response, parse the JSON

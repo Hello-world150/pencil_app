@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '/components/backend/classes.dart';
+import 'explore_card_widgets.dart';
 
 class ExploreCard extends StatelessWidget {
   const ExploreCard({
@@ -32,24 +33,20 @@ class ExploreCard extends StatelessWidget {
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               // widgets in card
-              return Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(40.0),
-                  child: Column(
-                    children: [
-                      // hitokoto content
-                      Expanded(
-                        child: Center(
-                          child: Text(
-                            snapshot.data!.content,
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                        ),
-                      ),
-                      // hitokoto source
-                      Center(child: Text('— ${snapshot.data!.from} —')),
-                    ],
-                  ),
+              return Padding(
+                padding: const EdgeInsets.all(40.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // hitokoto title
+                    ExploreCardHitokotoTitle(snapshot: snapshot),
+
+                    // hitokoto content
+                    ExploreCardHitokotoContent(snapshot: snapshot),
+
+                    // hitokoto source
+                    ExploreCardHitokotoFrom(snapshot: snapshot),
+                  ],
                 ),
               );
             } else if (snapshot.hasError) {

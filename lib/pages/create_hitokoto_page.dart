@@ -15,14 +15,15 @@ class CreateHitokotoPage extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            // show optional image, from user's choice
-
             // input widget
             Form(
               child: Column(
                 children: [
                   // optional title
-                  TextFormField(decoration: InputDecoration(hintText: '标题')),
+                  TextFormField(
+                    decoration: InputDecoration(hintText: '标题（可无）'),
+                    textAlign: TextAlign.center,
+                  ),
 
                   // content
                   TextFormField(
@@ -31,7 +32,10 @@ class CreateHitokotoPage extends StatelessWidget {
                   ),
 
                   // optional author or source
-                  TextFormField(decoration: InputDecoration(hintText: '作者/出处')),
+                  TextFormField(
+                    decoration: InputDecoration(hintText: '作者/出处（可无）'),
+                    textAlign: TextAlign.center,
+                  ),
                 ],
               ),
             ),
