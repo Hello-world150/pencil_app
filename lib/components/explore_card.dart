@@ -21,6 +21,7 @@ class ExploreCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
+              // TODO: divide Hitokoto details page
               builder: (context) => Scaffold(
                 appBar: AppBar(title: Text('Hitokoto $index')),
                 body: Center(child: Text('Details for Hitokoto $index')),

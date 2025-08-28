@@ -49,7 +49,7 @@ class ExplorePage extends StatelessWidget {
 
       body: Padding(
         padding: const EdgeInsets.only(top: 85.0, bottom: 85.0),
-        child: ExploreCardSwiper(),
+        child: const ExploreCardSwiper(),
       ),
     );
   }
