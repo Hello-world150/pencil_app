@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '/components/backend/classes.dart';
+import 'package:pencil_app/pages/hitokoto_details_page.dart';
+import 'backend/classes.dart';
 import 'explore_card_widgets.dart';
 
 class ExploreCard extends StatelessWidget {
@@ -16,28 +17,23 @@ class ExploreCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.hardEdge,
-      child: InkWell(
-        onTap: () => {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              // TODO: divide Hitokoto details page
-              builder: (context) => Scaffold(
-                appBar: AppBar(title: Text('Hitokoto $index')),
-                body: Center(child: Text('Details for Hitokoto $index')),
-              ),
-            ),
-          ),
-        },
-        child: FutureBuilder<Hitokoto>(
-          future: futureHitokotos[index],
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              // widgets in card
-              return Padding(
-                padding: const EdgeInsets.all(40.0),
+      child: FutureBuilder<Hitokoto>(
+        future: futureHitokotos[index],
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            // widgets in card
+            return InkWell(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        HitokotoDetailsPage(hitokoto: snapshot.data!),
+                  ),
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // hitokoto title
                     ExploreCardHitokotoTitle(snapshot: snapshot),
@@ -45,18 +41,24 @@ class ExploreCard extends StatelessWidget {
                     // hitokoto content
                     ExploreCardHitokotoContent(snapshot: snapshot),
 
-                    // hitokoto source
+                    // hitokoto from
                     ExploreCardHitokotoFrom(snapshot: snapshot),
+
+                    SizedBox(height: 20.0),
+                    // operatings of one hitokoto
+                    ExploreCardOperatingTab(),
                   ],
                 ),
-              );
-            } else if (snapshot.hasError) {
-              return Center(child: Text('${snapshot.error}'));
-            }
+              ),
+            );
+          } else if (snapshot.hasError) {
+            // if has error, show error message
+            return Center(child: Text('${snapshot.error}'));
+          } else {
             // by default, show a loading spinner
-            return const Center(child: CircularProgressIndicator());
-          },
-        ),
+            return Center(child: CircularProgressIndicator());
+          }
+        },
       ),
     );
   }

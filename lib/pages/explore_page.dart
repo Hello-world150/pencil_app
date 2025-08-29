@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'time_corridor_page.dart';
+// import 'time_corridor_page.dart';
 import 'create_hitokoto_page.dart';
 import '/components/explore_card_swiper.dart';
 
@@ -19,20 +19,21 @@ class ExplorePage extends StatelessWidget {
         automaticallyImplyLeading: false,
 
         // action to show the history page
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.history),
+        // TODO: wait api impl time query
+        // actions: <Widget>[
+        //   IconButton(
+        //     icon: const Icon(Icons.history),
 
-            // navigate to the time corridor page
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const TimeCorridorPage(),
-                ),
-              );
-            },
-          ),
-        ],
+        //     // navigate to the time corridor page
+        //     onPressed: () {
+        //       Navigator.of(context).push(
+        //         MaterialPageRoute(
+        //           builder: (context) => const TimeCorridorPage(),
+        //         ),
+        //       );
+        //     },
+        //   ),
+        // ],
       ),
 
       // this is the floating action button to create a new hitokoto

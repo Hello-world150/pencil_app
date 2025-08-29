@@ -32,13 +32,13 @@ class ProfilePage extends StatelessWidget {
             Row(
               children: [
                 // this is the user avatar
-                CircleAvatar(
-                  radius: 24,
-                  backgroundImage: AssetImage(
-                    'assets/profile_picture.png',
-                  ), // Replace with your image
-                ),
-
+                // TODO: wait api impl image store
+                // CircleAvatar(
+                //   radius: 24,
+                //   backgroundImage: AssetImage(
+                //     'assets/profile_picture.png',
+                //   ), // Replace with your image
+                // ),
                 const SizedBox(width: 20),
 
                 // this is the user name
