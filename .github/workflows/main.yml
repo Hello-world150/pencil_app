@@ -1,9 +1,9 @@
-name: Build and distribute
+name: Build Flutter Android Application
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
