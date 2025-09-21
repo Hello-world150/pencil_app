@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-const String apiRandomHitokotoUrl = 'http://localhost:8000/hitokoto/';
+const String apiRandomHitokotoUrl = 'https://www.qhl.codes/hitokoto/';
 
 // the class of hitokoto
 class Hitokoto {

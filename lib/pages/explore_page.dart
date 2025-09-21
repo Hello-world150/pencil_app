@@ -37,17 +37,16 @@ class ExplorePage extends StatelessWidget {
       ),
 
       // this is the floating action button to create a new hitokoto
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.create),
+      // floatingActionButton: FloatingActionButton(
+      //   child: const Icon(Icons.create),
 
-        // navigate to the create hitokoto page
-        onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => const CreateHitokotoPage()),
-          );
-        },
-      ),
-
+      //   // navigate to the create hitokoto page
+      //   onPressed: () {
+      //     Navigator.of(context).push(
+      //       MaterialPageRoute(builder: (context) => const CreateHitokotoPage()),
+      //     );
+      //   },
+      // ),
       body: Padding(
         padding: const EdgeInsets.only(top: 85.0, bottom: 85.0),
         child: const ExploreCardSwiper(),
