@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'time_corridor_page.dart';
-import 'create_hitokoto_page.dart';
+// import 'create_hitokoto_page.dart';
 import '/components/explore_card_swiper.dart';
 
 class ExplorePage extends StatelessWidget {
