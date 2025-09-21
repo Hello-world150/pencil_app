@@ -28,9 +28,9 @@ You will get some apk file, just like releases page.
 ## Use
 
 ### Download
-Go to [release page](https://github.com/Hello-world150/pencil_app/releases/tag/v1.0.0) to download proper apk. 
-For not old android phones, you can download [this one](https://github.com/Hello-world150/pencil_app/releases/download/v1.0.0/app-arm64-v8a-release.apk). 
-For other editions, please see [that page](https://github.com/Hello-world150/pencil_app/releases/tag/v1.0.0).
+Go to [release page](https://github.com/Hello-world150/pencil_app/releases/latest) to download proper apk. 
+For not old android phones, you can download [this one](https://github.com/Hello-world150/pencil_app/releases/download/v1.0.1/app-arm64-v8a-release.apk). 
+For other editions, please see [that page](https://github.com/Hello-world150/pencil_app/releases/tag/v1.0.1).
 
 ### Install
 Now you have an android package file (apk). Just put it into your android phone any normal directory. And tap it, android system will install it automagically.
